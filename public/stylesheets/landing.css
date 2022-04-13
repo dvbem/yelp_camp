@@ -1,0 +1,83 @@
+body {
+    background-color: #000;
+}
+
+#landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding: 40vh;  
+}
+
+#landing-header h1 {
+    color: #fff; 
+}
+
+.slideshow {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: imageAnimation 15s linear infinite;
+    z-index: 0;
+}
+
+.slideshow li:nth-child(1) {
+    background-image: url('https://the-riotact.com/wp-content/uploads/2010/10/The-Best-Campgrounds-Near-Canberra.jpg');
+}
+
+.slideshow li:nth-child(2) {
+    background-image: url('https://campper.com/blog/wp-content/uploads/2017/04/camping-kids-tent-iStock_69577843_LARGE.jpg');
+    animation-delay: 3s;
+}
+.slideshow li:nth-child(3) {
+    background-image: url('https://www.themandagies.com/wp-content/uploads/2019/08/Heceta-Lighthouse-Point-Cape-Perpetua-Eugene-Cascades-Coast-travel-oregon-the-mandagies-road-trip-19.jpg');
+    animation-delay: 6s;
+}
+.slideshow li:nth-child(4) {
+    background-image: url('https://laurenmccormickphotography.com/wp-content/uploads/2021/07/Red-Pine-Camp-Wedding_0047-1024x686-2.jpg');
+    animation-delay: 9s;
+}
+
+.slideshow li:nth-child(5) {
+    background-image: url('https://i.pinimg.com/originals/da/0f/10/da0f10d49a12e34abfd87290e7196688.jpg');
+    animation-delay: 12s;
+}
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    10% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+}
+
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}
