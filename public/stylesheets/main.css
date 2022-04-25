@@ -13,3 +13,41 @@
 .del-form {
     display: inline;
 }
+
+#nav {
+    text-decoration: none;
+    color: grey;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 500px) {
+    h1 {font-size: 32px;}
+    h2 {font-size: 26px;}
+    h3 {font-size: 20px;}
+    h4 {font-size: 18px;}
+    h5 {font-size: 15px;}
+    h6 {font-size: 11px;}
+
+    header .jumbotron {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    div .container {
+        margin-right: 5px;
+        margin-left: 5px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media screen and (max-width: 350px) {
+    h1 {font-size: 24px;}
+    h2 {font-size: 20px;}
+    h3 {font-size: 18px;}
+    h4 {font-size: 14px;}
+    h5 {font-size: 11px;}
+    h6 {font-size: 9px;}
+
+    header .jumbotron {
+        padding: 0;
+    }
+}
