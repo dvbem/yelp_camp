@@ -18,7 +18,22 @@ var campgroundsRoutes   = require('./routes/campgrounds'),
 
 
 //seedDb();
-mongoose.connect("mongodb://localhost/yelp_camp", {useNewUrlParser: true}, {useUnifiedTopology: true});
+//mongoose.connect("mongodb://localhost/yelp_camp", {useNewUrlParser: true}, {useUnifiedTopology: true});
+//mongoose.connect("mongodb+srv://Dvbem:<17071997chidubem>@yelpcamp.mjt51.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+var url ='mongodb+srv://Dvbem:1707@yelpcamp.mjt51.mongodb.net/yelpcamp?retryWrites=true&w=majority';
+var connectionParams = {
+    useNewUrlParser: true,
+    useCreateIndex:  true,
+    useUnifiedTopology: true
+}
+mongoose.connect(url, connectionParams)
+    .then( () => {
+        console.log('connected to the database')
+    })
+    .catch( (err) => {
+        console.log(err);
+    });
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
