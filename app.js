@@ -1,4 +1,3 @@
-var PORT            = process.env.PORT || '8080'
 var express         = require('express'),
     app             = express(),
     mongoose        = require('mongoose'),
@@ -63,7 +62,9 @@ app.use(methodOverride("_method"));
 app.use("/campgrounds", campgroundsRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/", authRoutes);
-app.set("port", PORT);
+app.listen(process.env.PORT || 3000, function(){
+    console.log('express server listening')
+})
 
 //app.listen(3000, function(){
     //console.log("Running the yelpcamp app!");
