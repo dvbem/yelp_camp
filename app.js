@@ -1,3 +1,4 @@
+var PORT            = process.env.PORT || '8080'
 var express         = require('express'),
     app             = express(),
     mongoose        = require('mongoose'),
@@ -9,8 +10,7 @@ var express         = require('express'),
     session         = require('express-session'),
     passport        = require('passport'),
     LocalStrategy   = require('passport-local'),
-    flash           = require('connect-flash'),
-    PORT            = process.env.PORT || '8080'
+    flash           = require('connect-flash');
     //seedDb          = require('./seeds');
 
 var campgroundsRoutes   = require('./routes/campgrounds'),    
