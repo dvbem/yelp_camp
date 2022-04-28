@@ -64,7 +64,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/", authRoutes);
 app.listen(process.env.PORT || 3000, function(){
     console.log('express server listening')
-})
+});
 
 //app.listen(3000, function(){
     //console.log("Running the yelpcamp app!");
