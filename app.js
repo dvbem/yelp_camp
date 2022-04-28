@@ -9,7 +9,8 @@ var express         = require('express'),
     session         = require('express-session'),
     passport        = require('passport'),
     LocalStrategy   = require('passport-local'),
-    flash           = require('connect-flash');
+    flash           = require('connect-flash'),
+    PORT            = process.env.PORT || '8080'
     //seedDb          = require('./seeds');
 
 var campgroundsRoutes   = require('./routes/campgrounds'),    
@@ -62,6 +63,7 @@ app.use(methodOverride("_method"));
 app.use("/campgrounds", campgroundsRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/", authRoutes);
+app.set("port", PORT);
 
 //app.listen(3000, function(){
     //console.log("Running the yelpcamp app!");
