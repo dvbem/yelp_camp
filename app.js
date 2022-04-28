@@ -63,6 +63,6 @@ app.use("/campgrounds", campgroundsRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/", authRoutes);
 
-app.listen(3000, function(){
-    console.log("Running the yelpcamp app!");
-});
+//app.listen(3000, function(){
+    //console.log("Running the yelpcamp app!");
+//});
